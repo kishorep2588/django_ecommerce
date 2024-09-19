@@ -12,3 +12,5 @@ while True:
         print(int(num1) * int(num2))
     elif operation == '/':
         print(int(num1) / int(num2))
+    elif operation == '%':
+        print(int(num1) % int(num2))
