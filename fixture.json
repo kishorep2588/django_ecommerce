@@ -1,0 +1,210 @@
+[
+    {
+        "pk": 1,
+        "model": "store.Product",
+        "fields": {
+            "name": "Redmi 10 P",
+            "price": "18.999",
+            "description": "Redmi 10 Power (Power Black, 8",
+            "image": "/uploads/products/1.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "10.999"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "store.Product",
+        "fields": {
+            "name": "OnePlus No",
+            "price": "19.999",
+            "description": "OnePlus Nord CE 2 Lite 5G (Blu",
+            "image": "/uploads/products/2.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "18.999"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "store.Product",
+        "fields": {
+            "name": "OnePlus Bu",
+            "price": "2.299",
+            "description": "OnePlus Bullets Z2 Bluetooth W",
+            "image": "/uploads/products/3.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "1.999"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "store.Product",
+        "fields": {
+            "name": "Samsung Ga",
+            "price": "24.999",
+            "description": "Samsung Galaxy M33 5G (Mystiqu",
+            "image": "/uploads/products/4.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "15.999"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "store.Product",
+        "fields": {
+            "name": "OnePlus No",
+            "price": "19.999",
+            "description": "OnePlus Nord CE 2 Lite 5G (Bla",
+            "image": "/uploads/products/5.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "18.999"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "store.Product",
+        "fields": {
+            "name": "Redmi 10 P",
+            "price": "18.999",
+            "description": "Redmi 10 Power (Sporty Orange,",
+            "image": "/uploads/products/6.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "10.999"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "store.Product",
+        "fields": {
+            "name": "boAt Airdo",
+            "price": "3.995",
+            "description": "boAt Airdopes 141 Bluetooth Tr",
+            "image": "/uploads/products/7.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "1.299"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "store.Product",
+        "fields": {
+            "name": "Apple 20W ",
+            "price": "1.900",
+            "description": "Apple 20W USB-C Power Adapter ",
+            "image": "/uploads/products/8.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "1.589"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "store.Product",
+        "fields": {
+            "name": "Fire-Boltt",
+            "price": "19.999",
+            "description": "Fire-Boltt Ninja Call Pro Plus",
+            "image": "/uploads/products/9.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "1.799"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "store.Product",
+        "fields": {
+            "name": "Samsung Ga",
+            "price": "24.999",
+            "description": "Samsung Galaxy M33 5G (Emerald",
+            "image": "/uploads/products/10.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "15.999"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "store.Product",
+        "fields": {
+            "name": "realme nar",
+            "price": "13.499",
+            "description": "realme narzo 50A Prime (Flash ",
+            "image": "/uploads/products/11.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "9.749"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "store.Product",
+        "fields": {
+            "name": "Redmi A1 (",
+            "price": "8.999",
+            "description": "Redmi A1 (Light Blue, 2GB RAM,",
+            "image": "/uploads/products/12.png",
+            "category": 2,
+            "is_sale": false,
+            "sale_price": "5.899"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "store.Product",
+        "fields": {
+            "name": "OnePlus No",
+            "price": "21.999",
+            "description": "OnePlus Nord CE 2 Lite 5G (Blu",
+            "image": "/uploads/products/13.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "20.999"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "store.Product",
+        "fields": {
+            "name": "boAt Airdo",
+            "price": "4.490",
+            "description": "boAt Airdopes Atom 81 True Wir",
+            "image": "/uploads/products/14.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "1.299"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "store.Product",
+        "fields": {
+            "name": "boAt Airdo",
+            "price": "4.490",
+            "description": "boAt Airdopes 141 Bluetooth Tr",
+            "image": "/uploads/products/15.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "1.299"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "store.Product",
+        "fields": {
+            "name": "boAt BassH",
+            "price": "999",
+            "description": "boAt BassHeads 100 in-Ear Wire",
+            "image": "/uploads/products/16.png",
+            "category": 2,
+            "is_sale": true,
+            "sale_price": "399"
+        }
+    }
+]
