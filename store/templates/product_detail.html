@@ -41,19 +41,62 @@
             <br>
             <br>
   
-            <p>
+            <!-- <p>
               {{product.description}}
             </p>
   
-            <hr />
+            <hr /> -->
+
+            <div class="row">
+              <div class="col-md-2">Quantity:</div>
+              <div class="col-md-2">
+                <select class="form-select" aria-label="Default select example" id="cart-quantity">
+                  <!-- <option selected>Open this select menu</option> -->
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <br><br>
 
             <div>
                 <a class="btn btn-secondary" href="{% url 'home' %}">Home</a>
+                <button class="btn btn-secondary" tyoe="button"
+                id="add-cart" value="{{product.id}}">Add To Cart</button>
             </div>
         </main>
       </div>
     </div>
   </section>
+
+  <script>
+    $(document).on('click', "#add-cart", function(e){
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url: "{% url 'cart_add' %}",
+        data:{
+          product_id: $('#add-cart').val(),
+          product_quantity: $('#cart-quantity option:selected').text(),
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+          action: 'post'
+        },
+
+        success: function(json){
+          console.log(json)
+          document.getElementById('cart_quantity').textContent = json.qty;
+        },
+
+        error: function(xhr, errmsg, err) {
+        console.error(xhr.status + ": " + xhr.responseText);
+      }
+      });
+    })
+  </script>
 
 
 {% endblock %}
