@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Shipping Info</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Information about Shipping Information..</p>
+            </div>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
+
+    <div class="container">
+        <div class="row">
+            {% if user.is_authenticated %}
+                <div class="col-md-3">
+                    <div class="osahan-account-page-left shadow-sm bg-white h-100">
+                        <div class="border-bottom p-4">
+                            <div class="osahan-user text-center">
+                                <div class="osahan-user-media">
+                                    <img class="mb-3 rounded-pill shadow-sm mt-1" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="gurdeep singh osahan">
+                                    <div class="osahan-user-media-body">
+                                        <h6 class="mb-2" style="font-size: 50px;">{{user}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="osahan-account-page-right shadow-sm bg-white p-4 h-100">
+                        <div class="tab-content">
+                            <div class="tab-pane fade  active show" id="addresses" role="tabpanel" aria-labelledby="addresses-tab">
+                                <h4 class="font-weight-bold mt-0 mb-4">Shipping Details</h4>
+                                <div class="row">
+                                    {% for shipping_address in shipping_info %}
+                                        <div class="col-md-6">
+                                            <div class="bg-white card addresses-item mb-4 border border-primary shadow">
+                                                <div class="gold-members p-4">
+                                                    <div class="media">
+                                                        <div class="mr-3"><i class="icofont-ui-home icofont-3x"></i></div>
+                                                        <div class="media-body">
+                                                            <h6 class="mb-1 text-secondary" style="font-size: 20px; text-align: center;"><b>{{shipping_address.shipping_category}}</b></h6>
+                                                            <P>
+                                                                <p>{{shipping_address.full_name}},</p>
+                                                                <p>{{shipping_address.address1}},{{shipping_address.address2}}</p>
+                                                                <p>{{shipping_address.city}},{{shipping_address.state}},{{shipping_address.country}},{{shipping_address.zipcode}}</p>
+                                                                <p>{{shipping_address.phone}}</p>
+                                                            </P>
+                                                            <p class="mb-0 text-black font-weight-bold">
+                                                                <a class="btn btn-secondary" href="{% url 'shipping_update'  shipping_address.id %}"><i class="icofont-ui-edit"></i> EDIT</a>
+                                                                <a class="btn btn-secondary" href="#"><i class="icofont-ui-delete"></i> SELECT</a>
+                                                                <a class="btn btn-danger" href="{% url 'shipping_delete' shipping_address.id %}"><i class="icofont-ui-delete"></i> DELETE</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-md-3" style="align-items: center;">
+                    <div class="col-md-6">
+                        <div class="bg-white card addresses-item mb-4 border border-primary shadow">
+                            <div class="gold-members p-4">
+                                <div class="media">
+                                    <div class="mr-3"><i class="icofont-ui-home icofont-3x"></i></div>
+                                    <div class="media-body">
+                                        <h6 class="mb-1 text-secondary">User is Not Logged in. Please login to Continue..</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="row">
+            {% if user.is_authenticated %}
+                <div>
+                    <a class="btn btn-secondary" href="{% url 'shipping_create' %}">Add Address</a>
+                </div>
+            {% endif %}
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+{% endblock %}

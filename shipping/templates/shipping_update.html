@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Shipping Info</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Updating Shipping Details..</p>
+                </div>
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+
+        <br>
+        <br>
+        <br>
+
+{% endblock %}
